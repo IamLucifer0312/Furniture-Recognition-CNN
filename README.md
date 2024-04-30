@@ -1,7 +1,7 @@
 # Machine-Learning-Team-7
 
-# When accessing to the dataset, you must first download Git LFS (Large File Storage) from this link: "https://git-lfs.com/"
+# Please download the components via this GGDrive link:
 
-# Then in the terminal run: "git lfs install", and "git pull" afterward, the folder will be downloaded to your Github folder
+# Extract them and bring the two subfolders: Splited_Data, and model to the same folder with your .ipynb code file
 
-# The downloaded folder is the dataset splited in the rate of 0.7 train - 0.15 val - 0.15 test, you can try spliting the dataset again using the original dataset (download from RMIT canvas).
+# There are three code files: DataPrep for spliting dataset into training, validating, and testing data. TrainModel to train the model (which I have already done). TestModel for loading the model.h5 file and testing the model.
