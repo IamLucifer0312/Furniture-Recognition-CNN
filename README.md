@@ -1,6 +1,6 @@
 # Machine-Learning-Team-7
 
-# Please download the components via this GGDrive link:
+# Please download the components via this GGDrive link: https://drive.google.com/file/d/1WaJX-hcoVNk52EE1QdQGTA2zlqLjbOPR/view?usp=sharing
 
 # Extract them and bring the two subfolders: Splited_Data, and model to the same folder with your .ipynb code file
 
