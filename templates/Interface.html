@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Classifier</title>
+</head>
+<body>
+    <h1>Image Classifier</h1>
+    <form id="imageForm" enctype="multipart/form-data">
+        <input type="file" name="image" id="imageInput" accept="image/*">
+        <button type="submit">Predict</button>
+    </form>
+    <div id="imageContainer">
+        <img id="selectedImage" src="" alt="Selected Image">
+    </div>
+    <div id="predictionResult"></div> <!-- New div to display prediction result -->
+
+    <script>
+        // Function to update selected image
+        function updateSelectedImage(event) {
+            const file = event.target.files[0];
+            const reader = new FileReader();
+            reader.onload = function(event) {
+                const imgElement = document.getElementById('selectedImage');
+                imgElement.src = event.target.result;
+            }
+            reader.readAsDataURL(file);
+        }
+
+        // Attach event listener to image input
+        document.getElementById('imageInput').addEventListener('change', updateSelectedImage);
+
+        // Function to handle form submission
+        async function handleFormSubmit(event) {
+            event.preventDefault();
+            const formData = new FormData(event.target);
+            const response = await fetch('/predict', {
+                method: 'POST',
+                body: formData
+            });
+            const data = await response.json();
+            const predictionResultDiv = document.getElementById('predictionResult');
+            predictionResultDiv.innerHTML = `<p>Prediction: ${data.prediction}</p>`; // Display prediction label
+        }
+
+        // Attach event listener to form submission
+        document.getElementById('imageForm').addEventListener('submit', handleFormSubmit);
+    </script>
+</body>
+</html>
