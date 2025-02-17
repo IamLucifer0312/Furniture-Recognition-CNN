@@ -4,7 +4,11 @@ The furniture industry has seen a significant shift towards online shopping in t
 However, traditional online furniture shopping often relies on text-based search functions, which can limit 
 users. This implies that users might struggle to convey the precise type or style of furniture they seek, 
 hindering their ability to browse product categories effectively and discover relevant items. This project is 
-focused on addressing the challenge of developing machine learning that can recognize images for an ecommerce furniture store, thus improving the customer experience.  
+focused on addressing the challenge of developing machine learning that can recognize images for an e-commerce furniture store, thus improving the customer experience.  
+
+# To run the file:
+
+Download and extract the dataset from the link in Dataset Description, then sequentially run the three file Step1_DataPrep -> Step2_TrainModel -> Step3_TestModel, and observe the result.
 
 # Dataset Description:
 
