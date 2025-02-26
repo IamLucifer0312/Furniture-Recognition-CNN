@@ -8,8 +8,7 @@ focused on addressing the challenge of developing machine learning that can reco
 
 # To run the file:
 
-Download and extract the dataset from the link in Dataset Description, then sequentially run the three file Step1_DataPrep -> Step2_TrainModel -> Step3_TestModel, and observe the result.
-
+This project is done on Google Colab, so you should run Task1_Part1 and Task2_Part2 there for the best experience
 # Dataset Description:
 
 
